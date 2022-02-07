@@ -1,0 +1,1138 @@
+@use "_reset.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+//font-family: 'Charmonman', cursive;
+//font-family: 'Thasadith', sans-serif;
+
+//---------------------------------------------------------------------------
+
+//colorsBG
+$colorBG_darker: #6A4131;
+$colorBG_lighter: #764A37;
+$colorBG_white: #ffffff;
+
+//colorsFonts
+$colorFont_white: #ffffff;
+$colorFont_black: #000000;
+$colorFont_yellow: #F2CD77;
+$colorFont_hoverYellow: #FDDE97;
+$colorFont_hoverBrown: #764A37;
+
+//colorCartButton
+$colorCartButton_hoverYellow: #FDDE97;
+
+//---------------------------------------------------------------------------
+
+//Desktop fontsize_menuBar
+$DESKfontSize_menuBarMenus: 21px;
+
+//Desktop fontSize_adsBar
+$DESKfontSize_adsBarRestaurantName: 21px;
+$DESKfontSize_adsBarQuotationMark: 96px;
+$DESKfontSize_adsBarHeading1: 64px;
+$DESKfontSize_adsBarButton: 24px;
+
+//Desktop fontSize_menus
+$DESKfontSize_menuHeading1: 36px;
+$DESKfontSize_menuTitle: 32px;
+$DESKfontSize_menuDescription: 18px;
+$DESKfontSize_menuPrice: 21px;
+$DESKfontSize_menuButton: 21px;
+$DESKfontSize_menuSeeMore: 22px;
+
+//Desktop fontSize_restaurantHistory
+$DESKfontSize_historyHeading1: 96px;
+$DESKfontSize_historyHeading2: 24px;
+$DESKfontSize_historyParagraph: 22px;
+$DESKfontSize_historySeeMore: 22px;
+
+//Desktop fontSize_footer
+$DESKfontSize_footerTelephone: 24px;
+$DESKfontSize_footerMenus: 21px;
+$DESKfontSize_footerCopyright: 21px;
+
+//---------------------------------------------------------------------------
+
+//MobilePhone fontsize_menuBar
+$PHONEfontSize_menuBarMenus: 18px;
+
+//MobilePhone fontSize_adsBar
+$PHONEfontSize_adsBarRestaurantName: 18px;
+$PHONEfontSize_adsBarQuotationMark: 64px;
+$PHONEfontSize_adsBarHeading1: 42px;
+$PHONEfontSize_adsBarButton: 19px;
+
+//MobilePhone fontSize_menus
+$PHONEfontSize_menuHeading1: 28px;
+$PHONEfontSize_menuTitle: 23.5px;
+$PHONEfontSize_menuDescription: 14px;
+$PHONEfontSize_menuPrice: 15px;
+$PHONEfontSize_menuButton: 16px;
+$PHONEfontSize_menuSeeMore: 17px;
+
+//MobilePhone fontSize_history
+$PHONEfontSize_historyHeading1: 48px;
+$PHONEfontSize_historyHeading2: 16px;
+$PHONEfontSize_historyParagraph: 16px;
+$PHONEfontSize_historySeeMore: 16px;
+
+//MobilePhone fontSize_footer
+$PHONEfontSize_footerTelephone: 18px;
+$PHONEfontSize_footerMenus: 16px;
+$PHONEfontSize_footerCopyright: 14px;
+
+//---------------------------------------------------------------------------
+
+header {
+    height: 94px;
+    background-color: $colorBG_darker;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .menuBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 370px;
+        margin-right: 370px;
+
+        .logo {
+            padding-right: 50px;
+            padding-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .menus {
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                li {
+                    a {
+                        color: $colorFont_white;
+                        font-family: 'Thasadith', sans-serif;
+                        font-weight: 700;
+                        font-size: $DESKfontSize_menuBarMenus;
+                        text-decoration: none;
+                        text-align: center;
+                        border-right: 1px solid white;
+                        padding-left: 28px;
+                        padding-right: 28px;
+                    }
+
+                    a:hover {
+                        color: $colorFont_hoverYellow;
+                    }
+                }
+
+                li:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+
+                li:last-child {
+                    a {
+                        border-right: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        .cartButton {
+            background-color: $colorBG_white;
+            border-radius: 5px;
+            padding: 8px;
+            margin-left: auto;
+            transition: transform .2s;
+
+            .cart {
+                width: 34px;
+                object-fit: cover;
+            }
+        }
+
+        .cartButton:hover {
+            transform: scale(1.1);
+            background-color: $colorCartButton_hoverYellow;
+        }
+
+        .bigMenusContainer {
+            display: none;
+        }
+    }
+}
+
+.adBar {
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        align-self: flex-end;
+    }
+
+    .adBarMiddle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 390px;
+
+        .restaurantName {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            hr {
+                width: 150px;
+                border: 1px solid #000000;
+            }
+
+            h3 {
+                font-family: 'Charmonman', cursive;
+                font-weight: 400;
+                font-size: $DESKfontSize_adsBarRestaurantName;
+            }
+        }
+
+        .slogan {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 45px;
+            padding-bottom: 45px;
+
+            .quotationMarkLeft {
+                font-family: 'Charmonman', cursive;
+                font-weight: 700;
+                font-size: $DESKfontSize_adsBarQuotationMark;
+                text-align: left;
+            }
+
+            .quotationMarkRight {
+                font-family: 'Charmonman', cursive;
+                font-weight: 700;
+                font-size: $DESKfontSize_adsBarQuotationMark;
+                text-align: right;
+            }
+
+            .divQuotationText {
+                height: 175px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .quotationText {
+                    font-family: 'Charmonman', cursive;
+                    font-weight: 400;
+                    font-size: $DESKfontSize_adsBarHeading1;
+                    text-align: center;
+                }
+            }
+        }
+
+        a {
+            button {
+                width: 380px;
+                height: 60px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $DESKfontSize_adsBarButton;
+                color: $colorFont_white;
+                background-color: $colorBG_lighter;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: $colorFont_hoverYellow;
+            }
+        }
+    }
+}
+
+.recommendedFood {
+    height: 1165px;
+    margin-left: 370px;
+    margin-right: 370px;
+    margin-top: 87px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    .recommendedFoodTitleContainer {
+        .recommendedFoodTitle {
+            font-family: 'Charmonman', cursive;
+            font-weight: 700;
+            font-size: $DESKfontSize_menuHeading1;
+            text-align: left;
+        }
+
+        .recommendedFoodTitleSeeMore {
+            display: none;
+        }
+    }
+
+    .foodMenus {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 155px;
+        grid-row-gap: 53px;
+        grid-template-areas:
+            "menuCard-1 menuCard-2 menuCard-3"
+            "menuCard-4 menuCard-5 menuCard-6";
+        box-sizing: border-box;
+
+        .menuCard-1 {
+            grid-area: menuCard-1;
+        }
+
+        .menuCard-2 {
+            grid-area: menuCard-2;
+        }
+
+        .menuCard-3 {
+            grid-area: menuCard-3;
+        }
+
+        .menuCard-4 {
+            grid-area: menuCard-4;
+        }
+
+        .menuCard-5 {
+            grid-area: menuCard-5;
+        }
+
+        .menuCard-6 {
+            grid-area: menuCard-6;
+        }
+
+        .foodMenuCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+
+            h2 {
+                width: 235px;
+                font-family: 'Charmonman', cursive;
+                font-weight: 700;
+                font-size: $DESKfontSize_menuTitle;
+                text-align: center;
+                padding-top: 28px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                width: 235px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 400;
+                font-size: $DESKfontSize_menuDescription;
+                text-align: center;
+            }
+
+            h3 {
+                width: 235px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $DESKfontSize_menuPrice;
+                text-align: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            button {
+                width: 235px;
+                height: 45px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $DESKfontSize_menuButton;
+                text-align: center;
+                border: none;
+                border-radius: 5px;
+                background-color: $colorBG_lighter;
+                color: $colorFont_white;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: $colorFont_hoverYellow;
+            }
+        }
+    }
+
+    .foodSeeMore {
+        font-family: 'Thasadith', sans-serif;
+        font-weight: 700;
+        font-size: $DESKfontSize_menuSeeMore;
+        text-align: right;
+        color: $colorFont_black;
+        align-self: flex-end;
+    }
+
+    .foodSeeMore:hover {
+        color: $colorFont_hoverBrown;
+    }
+}
+
+.recommendedDessert {
+    height: 1183px;
+    margin-left: 370px;
+    margin-right: 370px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    .recommendedDessertTitleContainer {
+        .recommendedDessertTitle {
+            font-family: 'Charmonman', cursive;
+            font-weight: 700;
+            font-size: $DESKfontSize_menuHeading1;
+            text-align: left;
+        }
+
+        .recommendedDessertTitleSeeMore {
+            display: none;
+        }
+    }
+
+    .dessertMenus {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 155px;
+        grid-row-gap: 53px;
+        grid-template-areas:
+            "menuCard-1 menuCard-2 menuCard-3"
+            "menuCard-4 menuCard-5 menuCard-6";
+        box-sizing: border-box;
+
+        .menuCard-1 {
+            grid-area: menuCard-1;
+        }
+
+        .menuCard-2 {
+            grid-area: menuCard-2;
+        }
+
+        .menuCard-3 {
+            grid-area: menuCard-3;
+        }
+
+        .menuCard-4 {
+            grid-area: menuCard-4;
+        }
+
+        .menuCard-5 {
+            grid-area: menuCard-5;
+        }
+
+        .menuCard-6 {
+            grid-area: menuCard-6;
+        }
+
+        .dessertMenuCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+
+            h2 {
+                width: 235px;
+                font-family: 'Charmonman', cursive;
+                font-weight: 700;
+                font-size: $DESKfontSize_menuTitle;
+                text-align: center;
+                padding-top: 28px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                width: 235px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 400;
+                font-size: $DESKfontSize_menuDescription;
+                text-align: center;
+            }
+
+            h3 {
+                width: 235px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $DESKfontSize_menuPrice;
+                text-align: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            button {
+                width: 235px;
+                height: 45px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $DESKfontSize_menuButton;
+                text-align: center;
+                border: none;
+                border-radius: 5px;
+                background-color: $colorBG_lighter;
+                color: $colorFont_white;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: $colorFont_hoverYellow;
+            }
+        }
+    }
+
+    .dessertSeeMore {
+        font-family: 'Thasadith', sans-serif;
+        font-weight: 700;
+        font-size: $DESKfontSize_menuSeeMore;
+        text-align: right;
+        color: $colorFont_black;
+        align-self: flex-end;
+    }
+
+    dessertSeeMore:hover {
+        color: $colorFont_hoverBrown;
+    }
+}
+
+.restaurantHistory {
+    height: 579.5px;
+    margin-top: 50px;
+    padding-left: 370px;
+    padding-right: 370px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colorBG_lighter;
+    box-sizing: border-box;
+
+    .historyDetailsUp {
+        display: none;
+    }
+
+    .historyDetails {
+        padding-left: 56px;
+        height: 387px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .historyHeading1 {
+            font-family: 'Charmonman', cursive;
+            font-weight: 700;
+            font-size: $DESKfontSize_historyHeading1;
+            color: $colorFont_yellow;
+            text-align: left;
+        }
+
+        .historyHeading2 {
+            font-family: 'Thasadith', sans-serif;
+            font-weight: 700;
+            font-size: $DESKfontSize_historyHeading2;
+            text-align: left;
+            color: $colorFont_white;
+        }
+
+        p {
+            font-family: 'Thasadith', sans-serif;
+            font-weight: 400;
+            font-size: $DESKfontSize_historyParagraph;
+            line-height: 30px;
+            text-align: left;
+            color: $colorFont_white;
+        }
+
+        a {
+            font-family: 'Thasadith', sans-serif;
+            font-weight: 700;
+            font-size: $DESKfontSize_historySeeMore;
+            text-align: right;
+            color: $colorFont_white;
+            align-self: flex-end;
+        }
+
+        a:hover {
+            color: $colorFont_hoverYellow;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    margin-top: 81px;
+    display: flex;
+    flex-direction: column;
+
+    .footerAdsBar {
+        width: 100%;
+        height: 63.2px;
+        padding-left: 370px;
+        padding-right: 370px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+
+        .middleAd {
+            h3 {
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $DESKfontSize_footerTelephone;
+                text-align: center;
+                color: $colorFont_black;
+            }
+        }
+
+        .middleAdPhone {
+            display: none;
+        }
+
+        .leftAd {
+            width: 266px;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                li {
+                    a {
+                        font-family: 'Thasadith', sans-serif;
+                        font-weight: 700;
+                        font-size: $DESKfontSize_footerMenus;
+                        text-align: center;
+                        color: $colorFont_black;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: $colorFont_hoverBrown;
+                        font-size: $DESKfontSize_footerMenus + 1px;
+                    }
+                }
+            }
+        }
+
+        .rightAd {
+            width: 266px;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                li {
+                    img {
+                        cursor: pointer;
+                        transition: transform .2s;
+                    }
+
+                    img:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    .footerCopyrightBar {
+        height: 79px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorBG_darker;
+
+        h3 {
+            font-family: 'Thasadith', sans-serif;
+            font-weight: 700;
+            font-size: $DESKfontSize_footerCopyright;
+            text-align: center;
+            color: $colorFont_yellow;
+        }
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    header {
+        .menuBar {
+            margin-left: 32px;
+            margin-right: 32px;
+            justify-content: space-between;
+
+            a {
+                .logo {
+                    padding-right: 0px;
+                }
+            }
+
+            .menus {
+                display: none;
+            }
+
+            .cartButton {
+                display: none;
+            }
+
+            .bigMenusContainer {
+                display: flex;
+
+                i {
+                    cursor: pointer;
+                    color: #ffffff;
+                }
+
+                .menusContainer {
+                    position: absolute;
+                    left: 100%;
+                    top: 94px;
+                    transform: translate(-100%, 0);
+                    z-index: 2;
+
+                    ul {
+                        display: none;
+
+                        li {
+                            width: 130px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            padding-left: 15px;
+                            text-align: left;
+                            background-color: $colorBG_lighter;
+                            box-sizing: border-box;
+
+                            a {
+                                font-family: 'Thasadith', sans-serif;
+                                font-weight: 700;
+                                font-size: $PHONEfontSize_menuBarMenus;
+                                color: $colorFont_white;
+                                text-decoration: none;
+                            }
+                        }
+
+                        li:hover {
+                            background-color: $colorCartButton_hoverYellow;
+
+                            a {
+                                color: $colorFont_hoverBrown;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bigMenusContainer:hover {
+                .menusContainer {
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
+    .adBar {
+        height: 524px;
+
+        img {
+            width: 130px;
+        }
+
+        .adBarMiddle {
+            width: 260px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            .restaurantName {
+                hr {
+                    width: 83px;
+                }
+
+                h3 {
+                    font-size: $PHONEfontSize_adsBarRestaurantName;
+                }
+            }
+
+            .slogan {
+                padding-top: 40px;
+                padding-bottom: 40px;
+
+                .quotationMarkLeft {
+                    font-size: $PHONEfontSize_adsBarQuotationMark;
+                }
+
+                .quotationMarkRight {
+                    font-size: $PHONEfontSize_adsBarQuotationMark;
+                }
+
+                .divQuotationText {
+                    height: 123px;
+
+                    .quotationText {
+                        font-size: $PHONEfontSize_adsBarHeading1;
+                    }
+                }
+            }
+
+            a {
+                button {
+                    width: 155px;
+                    height: 47px;
+                    font-size: $PHONEfontSize_adsBarButton;
+                }
+            }
+        }
+    }
+
+    .recommendedFood {
+        height: 2480px;
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-top: 31px;
+        margin-bottom: 31px;
+        justify-content: space-around;
+        overflow: hidden;
+
+        .recommendedFoodTitleContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .recommendedFoodTitle {
+                width: 220px;
+                font-size: $PHONEfontSize_menuHeading1;
+            }
+
+            .recommendedFoodTitleSeeMore {
+                display: flex;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 400;
+                font-size: $PHONEfontSize_menuSeeMore;
+                text-align: right;
+                color: $colorFont_black;
+            }
+        }
+
+        .foodMenus {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 16px;
+            grid-template-areas:
+                "menuCard-1"
+                "menuCard-2"
+                "menuCard-3"
+                "menuCard-4"
+                "menuCard-5"
+                "menuCard-6";
+
+            .foodMenuCard {
+                img {
+                    transform: scale(0.75);
+                }
+
+                h2 {
+                    width: 175px;
+                    font-size: $PHONEfontSize_menuTitle;
+                    padding-top: 0px;
+                    padding-bottom: 12px;
+                }
+
+                p {
+                    width: 175px;
+                    font-size: $PHONEfontSize_menuDescription;
+                }
+
+                h3 {
+                    width: 175px;
+                    font-size: $PHONEfontSize_menuPrice;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+
+                button {
+                    width: 173px;
+                    height: 33px;
+                    font-size: $PHONEfontSize_menuButton;
+                }
+            }
+        }
+
+        .foodSeeMore {
+            display: none;
+        }
+    }
+
+    .recommendedDessert {
+        height: 2500px;
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-top: 0px;
+        justify-content: space-around;
+        overflow: hidden;
+
+        .recommendedDessertTitleContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .recommendedDessertTitle {
+                width: 220px;
+                font-size: $PHONEfontSize_menuHeading1;
+            }
+
+            .recommendedDessertTitleSeeMore {
+                display: flex;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 400;
+                font-size: $PHONEfontSize_menuSeeMore;
+                text-align: right;
+                color: $colorFont_black;
+            }
+        }
+
+        .dessertMenus {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 16px;
+            grid-template-areas:
+                "menuCard-1"
+                "menuCard-2"
+                "menuCard-3"
+                "menuCard-4"
+                "menuCard-5"
+                "menuCard-6";
+
+            .dessertMenuCard {
+                img {
+                    transform: scale(0.75);
+                }
+
+                h2 {
+                    width: 175px;
+                    font-size: $PHONEfontSize_menuTitle;
+                    padding-top: 0px;
+                    padding-bottom: 12px;
+                }
+
+                p {
+                    width: 175px;
+                    font-size: $PHONEfontSize_menuDescription;
+                }
+
+                h3 {
+                    width: 175px;
+                    font-size: $PHONEfontSize_menuPrice;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+
+                button {
+                    width: 173px;
+                    height: 33px;
+                    font-size: $PHONEfontSize_menuButton;
+                }
+            }
+        }
+
+        .dessertSeeMore {
+            display: none;
+        }
+    }
+
+    .restaurantHistory {
+        height: 546px;
+        padding-left: 32px;
+        padding-right: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .historyDetailsUp {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            .historyHeading1Up {
+                font-family: 'Charmonman', cursive;
+                font-weight: 700;
+                font-size: $PHONEfontSize_historyHeading1;
+                color: $colorFont_yellow;
+                text-align: center;
+            }
+
+            .historyHeading2Up {
+                padding-top: 4px;
+                font-family: 'Thasadith', sans-serif;
+                font-weight: 700;
+                font-size: $PHONEfontSize_historyHeading2;
+                text-align: center;
+                color: $colorFont_white;
+            }
+        }
+
+        img {
+            padding-top: 8px;
+            width: 350px;
+            object-fit: cover;
+        }
+
+        .historyDetails {
+            padding-left: 0px;
+            height: auto;
+            justify-content: flex-start;
+            align-items: center;
+
+            .historyHeading1 {
+                display: none;
+            }
+
+            .historyHeading2 {
+                display: none;
+            }
+
+            p {
+                padding-top: 8px;
+                font-size: $PHONEfontSize_historyParagraph;
+                line-height: 25px;
+                text-align: center;
+            }
+
+            a {
+                padding-top: 8px;
+                font-size: $PHONEfontSize_historySeeMore;
+                text-align: center;
+                align-self: center;
+            }
+        }
+    }
+
+    footer {
+        margin-top: 32px;
+
+        .footerAdsBar {
+            height: 124px;
+            padding-left: 0px;
+            padding-right: 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .middleAd {
+                h3 {
+                    font-size: $PHONEfontSize_footerTelephone;
+                }
+            }
+
+            .middleAdPhone {
+                display: flex;
+                
+                padding-top: 14px;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        a {
+                            padding-right: 13px;
+                            padding-left: 13px;
+                            font-family: 'Thasadith', sans-serif;
+                            font-weight: 700;
+                            font-size: $PHONEfontSize_footerMenus;
+                            text-align: center;
+                            color: $colorFont_black;
+                            text-decoration: none;
+                            border-right: 0.8px solid #000000;
+                        }
+
+                        a:hover {
+                            color: $colorFont_hoverBrown;
+                            font-size: $PHONEfontSize_footerMenus + 1px;
+                        }
+                    }
+
+                    li:first-child {
+                        a {
+                            padding-left: 0px;
+                        }
+                    }
+
+                    li:last-child {
+                        a {
+                            border: 0;
+                            padding-right: 0px;
+                        }
+                    }
+                }
+            }
+
+            .leftAd {
+                display: none;
+            }
+
+            .rightAd {
+                width: 180px;
+                padding-top: 7px;
+
+                ul {
+                    li {
+                        img {
+                            transition: transform .2s;
+                            transform: scale(0.55);
+                        }
+
+                        img:hover {
+                            transform: scale(0.65);
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerCopyrightBar {
+            height: 54px;
+
+            h3 {
+                font-size: $PHONEfontSize_footerCopyright;
+            }
+        }
+    }
+}

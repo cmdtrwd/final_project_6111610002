@@ -1,0 +1,1020 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  height: 94px;
+  background-color: #6A4131;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .menuBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 370px;
+  margin-right: 370px;
+}
+header .menuBar .logo {
+  padding-right: 50px;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+header .menuBar .menus ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .menuBar .menus ul li a {
+  color: #ffffff;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-decoration: none;
+  text-align: center;
+  border-right: 1px solid white;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+header .menuBar .menus ul li a:hover {
+  color: #FDDE97;
+}
+header .menuBar .menus ul li:first-child a {
+  padding-left: 0;
+}
+header .menuBar .menus ul li:last-child a {
+  border-right: 0;
+  padding-right: 0;
+}
+header .menuBar .cartButton {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+header .menuBar .cartButton .cart {
+  width: 34px;
+  object-fit: cover;
+}
+header .menuBar .cartButton:hover {
+  transform: scale(1.1);
+  background-color: #FDDE97;
+}
+header .menuBar .bigMenusContainer {
+  display: none;
+}
+
+.adBar {
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.adBar img {
+  align-self: flex-end;
+}
+.adBar .adBarMiddle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
+}
+.adBar .adBarMiddle .restaurantName {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.adBar .adBarMiddle .restaurantName hr {
+  width: 150px;
+  border: 1px solid #000000;
+}
+.adBar .adBarMiddle .restaurantName h3 {
+  font-family: "Charmonman", cursive;
+  font-weight: 400;
+  font-size: 21px;
+}
+.adBar .adBarMiddle .slogan {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.adBar .adBarMiddle .slogan .quotationMarkLeft {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  text-align: left;
+}
+.adBar .adBarMiddle .slogan .quotationMarkRight {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  text-align: right;
+}
+.adBar .adBarMiddle .slogan .divQuotationText {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.adBar .adBarMiddle .slogan .divQuotationText .quotationText {
+  font-family: "Charmonman", cursive;
+  font-weight: 400;
+  font-size: 64px;
+  text-align: center;
+}
+.adBar .adBarMiddle a button {
+  width: 380px;
+  height: 60px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #764A37;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.adBar .adBarMiddle a button:hover {
+  color: #FDDE97;
+}
+
+.recommendedFood {
+  height: 1165px;
+  margin-left: 370px;
+  margin-right: 370px;
+  margin-top: 87px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.recommendedFood .recommendedFoodTitleContainer .recommendedFoodTitle {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: left;
+}
+.recommendedFood .recommendedFoodTitleContainer .recommendedFoodTitleSeeMore {
+  display: none;
+}
+.recommendedFood .foodMenus {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 155px;
+  grid-row-gap: 53px;
+  grid-template-areas: "menuCard-1 menuCard-2 menuCard-3" "menuCard-4 menuCard-5 menuCard-6";
+  box-sizing: border-box;
+}
+.recommendedFood .foodMenus .menuCard-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menuCard-1;
+}
+.recommendedFood .foodMenus .menuCard-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: menuCard-2;
+}
+.recommendedFood .foodMenus .menuCard-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: menuCard-3;
+}
+.recommendedFood .foodMenus .menuCard-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: menuCard-4;
+}
+.recommendedFood .foodMenus .menuCard-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: menuCard-5;
+}
+.recommendedFood .foodMenus .menuCard-6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: menuCard-6;
+}
+.recommendedFood .foodMenus .foodMenuCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.recommendedFood .foodMenus .foodMenuCard h2 {
+  width: 235px;
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 20px;
+}
+.recommendedFood .foodMenus .foodMenuCard p {
+  width: 235px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+.recommendedFood .foodMenus .foodMenuCard h3 {
+  width: 235px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.recommendedFood .foodMenus .foodMenuCard button {
+  width: 235px;
+  height: 45px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #764A37;
+  color: #ffffff;
+  cursor: pointer;
+}
+.recommendedFood .foodMenus .foodMenuCard button:hover {
+  color: #FDDE97;
+}
+.recommendedFood .foodSeeMore {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #000000;
+  align-self: flex-end;
+}
+.recommendedFood .foodSeeMore:hover {
+  color: #764A37;
+}
+
+.recommendedDessert {
+  height: 1183px;
+  margin-left: 370px;
+  margin-right: 370px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+.recommendedDessert .recommendedDessertTitleContainer .recommendedDessertTitle {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: left;
+}
+.recommendedDessert .recommendedDessertTitleContainer .recommendedDessertTitleSeeMore {
+  display: none;
+}
+.recommendedDessert .dessertMenus {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 155px;
+  grid-row-gap: 53px;
+  grid-template-areas: "menuCard-1 menuCard-2 menuCard-3" "menuCard-4 menuCard-5 menuCard-6";
+  box-sizing: border-box;
+}
+.recommendedDessert .dessertMenus .menuCard-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menuCard-1;
+}
+.recommendedDessert .dessertMenus .menuCard-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: menuCard-2;
+}
+.recommendedDessert .dessertMenus .menuCard-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: menuCard-3;
+}
+.recommendedDessert .dessertMenus .menuCard-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: menuCard-4;
+}
+.recommendedDessert .dessertMenus .menuCard-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: menuCard-5;
+}
+.recommendedDessert .dessertMenus .menuCard-6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: menuCard-6;
+}
+.recommendedDessert .dessertMenus .dessertMenuCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.recommendedDessert .dessertMenus .dessertMenuCard h2 {
+  width: 235px;
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 20px;
+}
+.recommendedDessert .dessertMenus .dessertMenuCard p {
+  width: 235px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+.recommendedDessert .dessertMenus .dessertMenuCard h3 {
+  width: 235px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.recommendedDessert .dessertMenus .dessertMenuCard button {
+  width: 235px;
+  height: 45px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #764A37;
+  color: #ffffff;
+  cursor: pointer;
+}
+.recommendedDessert .dessertMenus .dessertMenuCard button:hover {
+  color: #FDDE97;
+}
+.recommendedDessert .dessertSeeMore {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #000000;
+  align-self: flex-end;
+}
+.recommendedDessert dessertSeeMore:hover {
+  color: #764A37;
+}
+
+.restaurantHistory {
+  height: 579.5px;
+  margin-top: 50px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #764A37;
+  box-sizing: border-box;
+}
+.restaurantHistory .historyDetailsUp {
+  display: none;
+}
+.restaurantHistory .historyDetails {
+  padding-left: 56px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.restaurantHistory .historyDetails .historyHeading1 {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  color: #F2CD77;
+  text-align: left;
+}
+.restaurantHistory .historyDetails .historyHeading2 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  color: #ffffff;
+}
+.restaurantHistory .historyDetails p {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  color: #ffffff;
+}
+.restaurantHistory .historyDetails a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #ffffff;
+  align-self: flex-end;
+}
+.restaurantHistory .historyDetails a:hover {
+  color: #FDDE97;
+}
+
+footer {
+  width: 100%;
+  margin-top: 81px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footerAdsBar {
+  width: 100%;
+  height: 63.2px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+footer .footerAdsBar .middleAd h3 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #000000;
+}
+footer .footerAdsBar .middleAdPhone {
+  display: none;
+}
+footer .footerAdsBar .leftAd {
+  width: 266px;
+}
+footer .footerAdsBar .leftAd ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerAdsBar .leftAd ul li a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+footer .footerAdsBar .leftAd ul li a:hover {
+  color: #764A37;
+  font-size: 22px;
+}
+footer .footerAdsBar .rightAd {
+  width: 266px;
+}
+footer .footerAdsBar .rightAd ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerAdsBar .rightAd ul li img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+footer .footerAdsBar .rightAd ul li img:hover {
+  transform: scale(1.1);
+}
+footer .footerCopyrightBar {
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6A4131;
+}
+footer .footerCopyrightBar h3 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  color: #F2CD77;
+}
+
+@media only screen and (max-width: 414px) {
+  header .menuBar {
+    margin-left: 32px;
+    margin-right: 32px;
+    justify-content: space-between;
+  }
+  header .menuBar a .logo {
+    padding-right: 0px;
+  }
+  header .menuBar .menus {
+    display: none;
+  }
+  header .menuBar .cartButton {
+    display: none;
+  }
+  header .menuBar .bigMenusContainer {
+    display: flex;
+  }
+  header .menuBar .bigMenusContainer i {
+    cursor: pointer;
+    color: #ffffff;
+  }
+  header .menuBar .bigMenusContainer .menusContainer {
+    position: absolute;
+    left: 100%;
+    top: 94px;
+    transform: translate(-100%, 0);
+    z-index: 2;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul {
+    display: none;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li {
+    width: 130px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    text-align: left;
+    background-color: #764A37;
+    box-sizing: border-box;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li a {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li:hover {
+    background-color: #FDDE97;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li:hover a {
+    color: #764A37;
+  }
+  header .menuBar .bigMenusContainer:hover .menusContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .adBar {
+    height: 524px;
+  }
+  .adBar img {
+    width: 130px;
+  }
+  .adBar .adBarMiddle {
+    width: 260px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .adBar .adBarMiddle .restaurantName hr {
+    width: 83px;
+  }
+  .adBar .adBarMiddle .restaurantName h3 {
+    font-size: 18px;
+  }
+  .adBar .adBarMiddle .slogan {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .adBar .adBarMiddle .slogan .quotationMarkLeft {
+    font-size: 64px;
+  }
+  .adBar .adBarMiddle .slogan .quotationMarkRight {
+    font-size: 64px;
+  }
+  .adBar .adBarMiddle .slogan .divQuotationText {
+    height: 123px;
+  }
+  .adBar .adBarMiddle .slogan .divQuotationText .quotationText {
+    font-size: 42px;
+  }
+  .adBar .adBarMiddle a button {
+    width: 155px;
+    height: 47px;
+    font-size: 19px;
+  }
+
+  .recommendedFood {
+    height: 2480px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+  .recommendedFood .recommendedFoodTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .recommendedFood .recommendedFoodTitleContainer .recommendedFoodTitle {
+    width: 220px;
+    font-size: 28px;
+  }
+  .recommendedFood .recommendedFoodTitleContainer .recommendedFoodTitleSeeMore {
+    display: flex;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: right;
+    color: #000000;
+  }
+  .recommendedFood .foodMenus {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 16px;
+    grid-template-areas: "menuCard-1" "menuCard-2" "menuCard-3" "menuCard-4" "menuCard-5" "menuCard-6";
+  }
+  .recommendedFood .foodMenus .foodMenuCard img {
+    transform: scale(0.75);
+  }
+  .recommendedFood .foodMenus .foodMenuCard h2 {
+    width: 175px;
+    font-size: 23.5px;
+    padding-top: 0px;
+    padding-bottom: 12px;
+  }
+  .recommendedFood .foodMenus .foodMenuCard p {
+    width: 175px;
+    font-size: 14px;
+  }
+  .recommendedFood .foodMenus .foodMenuCard h3 {
+    width: 175px;
+    font-size: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .recommendedFood .foodMenus .foodMenuCard button {
+    width: 173px;
+    height: 33px;
+    font-size: 16px;
+  }
+  .recommendedFood .foodSeeMore {
+    display: none;
+  }
+
+  .recommendedDessert {
+    height: 2500px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 0px;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+  .recommendedDessert .recommendedDessertTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .recommendedDessert .recommendedDessertTitleContainer .recommendedDessertTitle {
+    width: 220px;
+    font-size: 28px;
+  }
+  .recommendedDessert .recommendedDessertTitleContainer .recommendedDessertTitleSeeMore {
+    display: flex;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: right;
+    color: #000000;
+  }
+  .recommendedDessert .dessertMenus {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 16px;
+    grid-template-areas: "menuCard-1" "menuCard-2" "menuCard-3" "menuCard-4" "menuCard-5" "menuCard-6";
+  }
+  .recommendedDessert .dessertMenus .dessertMenuCard img {
+    transform: scale(0.75);
+  }
+  .recommendedDessert .dessertMenus .dessertMenuCard h2 {
+    width: 175px;
+    font-size: 23.5px;
+    padding-top: 0px;
+    padding-bottom: 12px;
+  }
+  .recommendedDessert .dessertMenus .dessertMenuCard p {
+    width: 175px;
+    font-size: 14px;
+  }
+  .recommendedDessert .dessertMenus .dessertMenuCard h3 {
+    width: 175px;
+    font-size: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .recommendedDessert .dessertMenus .dessertMenuCard button {
+    width: 173px;
+    height: 33px;
+    font-size: 16px;
+  }
+  .recommendedDessert .dessertSeeMore {
+    display: none;
+  }
+
+  .restaurantHistory {
+    height: 546px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .restaurantHistory .historyDetailsUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistory .historyDetailsUp .historyHeading1Up {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #F2CD77;
+    text-align: center;
+  }
+  .restaurantHistory .historyDetailsUp .historyHeading2Up {
+    padding-top: 4px;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .restaurantHistory img {
+    padding-top: 8px;
+    width: 350px;
+    object-fit: cover;
+  }
+  .restaurantHistory .historyDetails {
+    padding-left: 0px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistory .historyDetails .historyHeading1 {
+    display: none;
+  }
+  .restaurantHistory .historyDetails .historyHeading2 {
+    display: none;
+  }
+  .restaurantHistory .historyDetails p {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .restaurantHistory .historyDetails a {
+    padding-top: 8px;
+    font-size: 16px;
+    text-align: center;
+    align-self: center;
+  }
+
+  footer {
+    margin-top: 32px;
+  }
+  footer .footerAdsBar {
+    height: 124px;
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerAdsBar .middleAd h3 {
+    font-size: 18px;
+  }
+  footer .footerAdsBar .middleAdPhone {
+    display: flex;
+    padding-top: 14px;
+  }
+  footer .footerAdsBar .middleAdPhone ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerAdsBar .middleAdPhone ul li a {
+    padding-right: 13px;
+    padding-left: 13px;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    border-right: 0.8px solid #000000;
+  }
+  footer .footerAdsBar .middleAdPhone ul li a:hover {
+    color: #764A37;
+    font-size: 17px;
+  }
+  footer .footerAdsBar .middleAdPhone ul li:first-child a {
+    padding-left: 0px;
+  }
+  footer .footerAdsBar .middleAdPhone ul li:last-child a {
+    border: 0;
+    padding-right: 0px;
+  }
+  footer .footerAdsBar .leftAd {
+    display: none;
+  }
+  footer .footerAdsBar .rightAd {
+    width: 180px;
+    padding-top: 7px;
+  }
+  footer .footerAdsBar .rightAd ul li img {
+    transition: transform 0.2s;
+    transform: scale(0.55);
+  }
+  footer .footerAdsBar .rightAd ul li img:hover {
+    transform: scale(0.65);
+  }
+  footer .footerCopyrightBar {
+    height: 54px;
+  }
+  footer .footerCopyrightBar h3 {
+    font-size: 14px;
+  }
+  .recommendedFood .foodMenus .menuCard-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .recommendedFood .foodMenus .menuCard-2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .recommendedFood .foodMenus .menuCard-3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .recommendedFood .foodMenus .menuCard-4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .recommendedFood .foodMenus .menuCard-5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .recommendedFood .foodMenus .menuCard-6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus .menuCard-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus .menuCard-2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus .menuCard-3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus .menuCard-4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus .menuCard-5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus .menuCard-6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .recommendedDessert .dessertMenus > .menuCard-6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+}

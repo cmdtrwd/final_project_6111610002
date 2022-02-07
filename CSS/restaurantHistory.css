@@ -1,0 +1,807 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  height: 94px;
+  background-color: #6A4131;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .menuBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 370px;
+  margin-right: 370px;
+}
+header .menuBar .logo {
+  padding-right: 50px;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+header .menuBar .menus ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .menuBar .menus ul li a {
+  color: #ffffff;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-decoration: none;
+  text-align: center;
+  border-right: 1px solid white;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+header .menuBar .menus ul li a:hover {
+  color: #FDDE97;
+}
+header .menuBar .menus ul li:first-child a {
+  padding-left: 0;
+}
+header .menuBar .menus ul li:last-child a {
+  color: #FDDE97;
+  border-right: 0;
+  padding-right: 0;
+}
+header .menuBar .cartButton {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+header .menuBar .cartButton .cart {
+  width: 34px;
+  object-fit: cover;
+}
+header .menuBar .cartButton:hover {
+  transform: scale(1.1);
+  background-color: #FDDE97;
+}
+header .menuBar .bigMenusContainer {
+  display: none;
+}
+
+.titleBar {
+  width: 100%;
+  height: 650px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titleBar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.titleBar .overlayBG {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+.titleBar h1 {
+  position: absolute;
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 64px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.restaurantHistory {
+  height: 579.5px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.restaurantHistory .historyDetailsUp {
+  display: none;
+}
+.restaurantHistory .historyDetails {
+  padding-left: 56px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.restaurantHistory .historyDetails .historyHeading1 {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  color: #764A37;
+  text-align: left;
+}
+.restaurantHistory .historyDetails .historyHeading2 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistory .historyDetails p {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistory .historyDetails a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #ffffff;
+  align-self: flex-end;
+}
+.restaurantHistory .historyDetails a:hover {
+  color: #FDDE97;
+}
+
+.restaurantHistoryLeft {
+  height: 497px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.restaurantHistoryLeft .historyDetailsUp {
+  display: none;
+}
+.restaurantHistoryLeft .imageUp {
+  display: none;
+}
+.restaurantHistoryLeft .historyDetailsLeft {
+  padding-right: 56px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.restaurantHistoryLeft .historyDetailsLeft .historyHeading1 {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  color: #764A37;
+  text-align: left;
+}
+.restaurantHistoryLeft .historyDetailsLeft .historyHeading2 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistoryLeft .historyDetailsLeft p {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistoryLeft .historyDetailsLeft a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #ffffff;
+  align-self: flex-end;
+}
+.restaurantHistoryLeft .historyDetailsLeft a:hover {
+  color: #FDDE97;
+}
+
+.restaurantHistoryRight {
+  height: 497px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.restaurantHistoryRight .historyDetailsUp {
+  display: none;
+}
+.restaurantHistoryRight .historyDetailsRight {
+  padding-left: 56px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.restaurantHistoryRight .historyDetailsRight .historyHeading1 {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  color: #764A37;
+  text-align: left;
+}
+.restaurantHistoryRight .historyDetailsRight .historyHeading2 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistoryRight .historyDetailsRight p {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistoryRight .historyDetailsRight a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #ffffff;
+  align-self: flex-end;
+}
+.restaurantHistoryRight .historyDetailsRight a:hover {
+  color: #FDDE97;
+}
+
+.restaurantHistoryLast {
+  height: 497px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.restaurantHistoryLast .historyDetailsUp {
+  display: none;
+}
+.restaurantHistoryLast .historyDetailsLast {
+  padding-left: 56px;
+  height: 387px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.restaurantHistoryLast .historyDetailsLast .historyHeading1 {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-size: 96px;
+  color: #764A37;
+  text-align: left;
+}
+.restaurantHistoryLast .historyDetailsLast p {
+  padding-top: 38px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+  color: #000000;
+}
+.restaurantHistoryLast .historyDetailsLast a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: right;
+  color: #ffffff;
+  align-self: flex-end;
+}
+.restaurantHistoryLast .historyDetailsLast a:hover {
+  color: #FDDE97;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer .footerAdsBar {
+  width: 100%;
+  height: 63.2px;
+  padding-left: 370px;
+  padding-right: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+footer .footerAdsBar .middleAd h3 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #000000;
+  text-align: center;
+}
+footer .footerAdsBar .middleAdPhone {
+  display: none;
+}
+footer .footerAdsBar .leftAd {
+  width: 266px;
+}
+footer .footerAdsBar .leftAd ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerAdsBar .leftAd ul li a {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+footer .footerAdsBar .leftAd ul li a:hover {
+  color: #764A37;
+  font-size: 22px;
+}
+footer .footerAdsBar .rightAd {
+  width: 266px;
+}
+footer .footerAdsBar .rightAd ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerAdsBar .rightAd ul li img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+footer .footerAdsBar .rightAd ul li img:hover {
+  transform: scale(1.1);
+}
+footer .footerCopyrightBar {
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6A4131;
+}
+footer .footerCopyrightBar h3 {
+  font-family: "Thasadith", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  color: #F2CD77;
+}
+
+@media only screen and (max-width: 414px) {
+  header .menuBar {
+    margin-left: 32px;
+    margin-right: 32px;
+    justify-content: space-between;
+  }
+  header .menuBar a .logo {
+    padding-right: 0px;
+  }
+  header .menuBar .menus {
+    display: none;
+  }
+  header .menuBar .cartButton {
+    display: none;
+  }
+  header .menuBar .bigMenusContainer {
+    display: flex;
+  }
+  header .menuBar .bigMenusContainer i {
+    cursor: pointer;
+    color: #ffffff;
+  }
+  header .menuBar .bigMenusContainer .menusContainer {
+    position: absolute;
+    left: 100%;
+    top: 94px;
+    transform: translate(-100%, 0);
+    z-index: 2;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul {
+    display: none;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li {
+    width: 130px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    text-align: left;
+    background-color: #764A37;
+    box-sizing: border-box;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li a {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li:hover {
+    background-color: #FDDE97;
+  }
+  header .menuBar .bigMenusContainer .menusContainer ul li:hover a {
+    color: #764A37;
+  }
+  header .menuBar .bigMenusContainer:hover .menusContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .titleBar {
+    width: 100%;
+    height: 524px;
+  }
+  .titleBar img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .titleBar h1 {
+    width: 201px;
+    line-height: 58px;
+    font-size: 42px;
+  }
+
+  .restaurantHistory {
+    margin-top: 40px;
+    height: 480px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .restaurantHistory .historyDetailsUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistory .historyDetailsUp .historyHeading1Up {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #764A37;
+    text-align: center;
+  }
+  .restaurantHistory .historyDetailsUp .historyHeading2Up {
+    padding-top: 4px;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+  }
+  .restaurantHistory img {
+    padding-top: 8px;
+    width: 350px;
+    object-fit: cover;
+  }
+  .restaurantHistory .historyDetails {
+    padding-left: 0px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistory .historyDetails .historyHeading1 {
+    display: none;
+  }
+  .restaurantHistory .historyDetails .historyHeading2 {
+    display: none;
+  }
+  .restaurantHistory .historyDetails p {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .restaurantHistoryRight {
+    height: 480px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurantHistoryRight .historyDetailsUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistoryRight .historyDetailsUp .historyHeading1Up {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #764A37;
+    text-align: center;
+  }
+  .restaurantHistoryRight .historyDetailsUp .historyHeading2Up {
+    padding-top: 4px;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+  }
+  .restaurantHistoryRight img {
+    padding-top: 8px;
+    width: 350px;
+    object-fit: cover;
+  }
+  .restaurantHistoryRight .historyDetailsRight {
+    padding-left: 0px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistoryRight .historyDetailsRight .historyHeading1 {
+    display: none;
+  }
+  .restaurantHistoryRight .historyDetailsRight .historyHeading2 {
+    display: none;
+  }
+  .restaurantHistoryRight .historyDetailsRight p {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .restaurantHistoryLeft {
+    height: 480px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurantHistoryLeft .historyDetailsUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistoryLeft .historyDetailsUp .historyHeading1Up {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #764A37;
+    text-align: center;
+  }
+  .restaurantHistoryLeft .historyDetailsUp .historyHeading2Up {
+    padding-top: 4px;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+  }
+  .restaurantHistoryLeft .imageUp {
+    display: flex;
+    padding-top: 8px;
+    width: 350px;
+    object-fit: cover;
+  }
+  .restaurantHistoryLeft .historyDetailsLeft {
+    padding-right: 0px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistoryLeft .historyDetailsLeft .historyHeading1 {
+    display: none;
+  }
+  .restaurantHistoryLeft .historyDetailsLeft .historyHeading2 {
+    display: none;
+  }
+  .restaurantHistoryLeft .historyDetailsLeft p {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .restaurantHistoryLeft .imageDesktop {
+    display: none;
+  }
+
+  .restaurantHistoryLast {
+    height: 500px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurantHistoryLast .historyDetailsUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistoryLast .historyDetailsUp .historyHeading1Up {
+    padding-bottom: 20px;
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #764A37;
+    text-align: center;
+  }
+  .restaurantHistoryLast img {
+    padding-top: 8px;
+    width: 350px;
+    object-fit: cover;
+  }
+  .restaurantHistoryLast .historyDetailsLast {
+    padding-left: 0px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .restaurantHistoryLast .historyDetailsLast .historyHeading1 {
+    display: none;
+  }
+  .restaurantHistoryLast .historyDetailsLast p {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .restaurantHistoryLast .historyDetailsLast a {
+    padding-top: 8px;
+    font-size: 16px;
+    text-align: center;
+    align-self: center;
+  }
+
+  footer {
+    margin-top: 0px;
+  }
+  footer .footerAdsBar {
+    height: 124px;
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerAdsBar .middleAd h3 {
+    font-size: 18px;
+  }
+  footer .footerAdsBar .middleAdPhone {
+    display: flex;
+    padding-top: 14px;
+  }
+  footer .footerAdsBar .middleAdPhone ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footerAdsBar .middleAdPhone ul li a {
+    padding-right: 13px;
+    padding-left: 13px;
+    font-family: "Thasadith", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    border-right: 0.8px solid #000000;
+  }
+  footer .footerAdsBar .middleAdPhone ul li a:hover {
+    color: #764A37;
+    font-size: 17px;
+  }
+  footer .footerAdsBar .middleAdPhone ul li:first-child a {
+    padding-left: 0px;
+  }
+  footer .footerAdsBar .middleAdPhone ul li:last-child a {
+    border: 0;
+    padding-right: 0px;
+  }
+  footer .footerAdsBar .leftAd {
+    display: none;
+  }
+  footer .footerAdsBar .rightAd {
+    width: 180px;
+    padding-top: 7px;
+  }
+  footer .footerAdsBar .rightAd ul li img {
+    transition: transform 0.2s;
+    transform: scale(0.55);
+  }
+  footer .footerAdsBar .rightAd ul li img:hover {
+    transform: scale(0.65);
+  }
+  footer .footerCopyrightBar {
+    height: 54px;
+  }
+  footer .footerCopyrightBar h3 {
+    font-size: 14px;
+  }
+}
